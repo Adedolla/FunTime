@@ -9,15 +9,19 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    animation: bounce 15s infinite ease-in;
+    background-color: rgb(37, 27, 27);
 }
 .container{
-    background-color: aqua;
+    background-color:goldenrod;
+    
     border-radius: 1.5rem;
     /* text-align:inherit; */
     box-shadow:5px 10px 10px  yellowgreen;
     padding: 3rem;
     position: relative;
     overflow: hidden;
+    
 }
 .container h3{
     text-align: center;
@@ -92,16 +96,22 @@ ul li i {
     color: skyblue;
 }
 .btn{
-    background-color: blanchedalmond;
+    background-color: black;
     font-size: 20px;
     font-weight: 500;
     border: none;
     outline: none;
     border-radius: 50px;
+    color: antiquewhite;
 }
-btn:active, ul li:active{
+.btn:hover{
+  transform: translateY(-5px);
+    color: antiquewhite;
+    background-color: #333;
+}
+/* btn:active, ul li:active{
     transform: scale(0.98);
-}
+} */
 .copied{
     position: absolute;
     font-weight: 800;
@@ -115,4 +125,100 @@ btn:active, ul li:active{
 }
 .copied.active{
     transform: translateX( -10%);
+}
+
+
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-link:hover {
+    background-color: #1EBE5E;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 2rem;
+        box-shadow: 3px 6px 6px yellowgreen;
+        width: 80%;
+    }
+
+    .content {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .content p {
+        font-size: medium;
+        font-weight: 500;
+    }
+
+    .author {
+        font-size: medium;
+    }
+
+    .socia-media ul li {
+        height: 40px;
+        width: 40px;
+        margin: 0 5px;
+    }
+
+    .socia-media ul li i {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        color: antiquewhite;
+        font-size: 18px;
+    }
+    
+
+@keyframes bounce{
+    10%{
+        background-image: url(/assets/bench-accounting-nvzvOPQW0gc-unsplash.jpg);
+        background-size: cover;
+    }
+    20%{
+        background-image: url(/assets/nasa.jpg);
+        background-size: cover;
+    }
+    40%{
+        background-image: url(/assets/pen.jpg);
+        background-size: cover;
+    }
+    60%{
+        background-image: url(/assets/nasa2.jpg);
+        background-size: cover;
+    }
+    80%{
+        background-image: url(/assets/sky.jpg);
+        background-size: cover;
+    }
+    90%{
+        background: linear-gradient(blue, pink, orange);
+    }
 }

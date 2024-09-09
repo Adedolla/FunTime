@@ -44,7 +44,7 @@ QuoteCopy.addEventListener('click', ()=>{
 
 
     setInterval(() => {
-        copiedElt.classList.remove('active');
+        copiedElt.classList.remove('active');   qwt5
     }, 1500);
 });
 
